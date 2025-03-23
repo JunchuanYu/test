@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ion Diffusion Simulation</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: #000;
+        }
+        canvas {
+            display: block;
+        }
+        #controls {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+            color: #333;
+        }
+        .ion-count {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="controls">
+        <button onclick="addIons(10)">Add 10 Ions</button>
+        <button onclick="clearIons()">Clear All</button>
+        <div class="ion-count">Positive Ions: <span id="positiveCount">0</span></div>
+        <div class="ion-count">Negative Ions: <span id="negativeCount">0</span></div>
+        <div>
+            <label>Temperature: <input type="range" id="temperature" min="0" max="2" step="0.1" value="1"></label>
+        </div>
+        <div>
+            <label>Ion Strength: <input type="range" id="ionStrength" min="0" max="2" step="0.1" value="1"></label>
+        </div>
+    </div>
+    <canvas id="canvas"></canvas>
+    <script src="ion_diffusion.js"></script>
+</body>
+</html> 
